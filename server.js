@@ -7,6 +7,9 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
+app.get('/', (req, res) => {
+  res.send('Site is working!');
+});
 // MongoDB connection
 const mongo_url =   process.env.MONGO_URI ? `${process.env.MONGO_URI}/leave_application` : 'mongodb://0.0.0.0:27017/leave_application'
 console.log("mongo_url===>",mongo_url)
